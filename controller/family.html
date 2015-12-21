@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Example 4 - Angular JS Controller</title>
+		<style>
+			div{
+				margin:20px;
+				padding:20px;
+				border:5px solid #444444;
+			}
+		</style>
+		<script src="../lib/angular.min.js"></script>
+	</head>
+	<body>
+		<h2>Family Tree - Scope Inheritence</h2>
+		<div ng-app="mainApp" ng-controller="FamilyController">
+			<p>Good {{timeOfDay}}, {{rootName}}!</p>
+
+			<div ng-controller="ChildController">
+				<p>Good {{timeOfDay}}, {{rootName}}!</p>
+
+				<div ng-controller="GrandChildController">
+					<p>Good {{timeOfDay}}, {{rootName}}!</p>
+				</div>
+			</div>
+		</div>
+		<script src="familyController.js"></script>
+	</body>
+</html>
