@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Example 2 - Angular JS Controller</title>
+		<script src="../lib/angular.min.js"></script>
+	</head>
+	<body>
+		<h2>Example with extrnal controller file</h2>
+		<div ng-app="mainApp" ng-controller="livingController">
+			<ul>
+				<li ng-repeat="x in livings">
+				{{x.name + ', ' + x.country}}
+				</li>
+			</ul>
+		</div>
+		<script src="livingController.js"></script>
+	</body>
+</html>
